@@ -53,3 +53,45 @@ function type() {
 }
 
 type();
+
+document.addEventListener("DOMContentLoaded", () => {
+  const heading = document.querySelector(".heading-sec__main");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.1,
+    }
+  );
+
+  observer.observe(heading);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const skills = document.querySelectorAll(".skills__skill");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.7,
+    }
+  );
+
+  skills.forEach((skill) => {
+    observer.observe(skill);
+  });
+});

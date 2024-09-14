@@ -1029,8 +1029,7 @@ textarea {
 
 #text {
   display: flex;
-  font-size: 2rem;
-  white-space: pre;
+  font-size: 1rem;
   gap: 5px; /* Harfler arasında boşluk */
 }
 

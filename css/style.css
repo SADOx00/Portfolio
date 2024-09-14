@@ -1026,3 +1026,42 @@ textarea {
   opacity: 1;
   transform: translateY(0);
 }
+
+#text {
+  display: flex;
+  font-size: 2rem;
+  white-space: pre;
+  gap: 5px; /* Harfler arasında boşluk */
+}
+
+#text span {
+  opacity: 0;
+  display: inline-block;
+  transition: opacity 0.3s ease;
+  color: #000; /* Siyah renkte başlasın */
+}
+
+#text span.disappear {
+  animation: disappear 1.5s forwards ease-in-out;
+}
+
+@keyframes disappear {
+  0% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    color: #000; /* Başlangıçta siyah */
+    filter: blur(0);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translateX(30px) scale(1.1);
+    color: #ff0000; /* Ortalarda kırmızıya dönüşsün */
+    filter: blur(1px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(80px) scale(0.8);
+    color: #ff0000;
+    filter: blur(3px); /* Efektle bulanıklaştır */
+  }
+}

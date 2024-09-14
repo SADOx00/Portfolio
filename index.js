@@ -37,23 +37,6 @@ headerLogoConatiner.addEventListener("click", () => {
   location.href = "index.html";
 });
 
-const textElement = document.getElementById("text");
-
-const text = " merhaba portfolyoma hoşgeldiniz.";
-let index = 0;
-let speed = 200; // Başlangıç hızı (ms)
-
-function type() {
-  if (index < text.length) {
-    textElement.textContent += text[index];
-    index++;
-    setTimeout(type, speed);
-    speed = Math.max(50, speed - 10); // Hızı artır, minimum 50ms
-  }
-}
-
-type();
-
 document.addEventListener("DOMContentLoaded", () => {
   const heading = document.querySelector(".heading-sec__main");
 
@@ -95,3 +78,52 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(skill);
   });
 });
+
+const textElement = document.getElementById("text");
+const text = "Merhaba, portfolyoma hoşgeldiniz.";
+let index = 0;
+let speed = 200; // Harflerin yazılma hızı
+
+function type() {
+  if (index < text.length) {
+    const span = document.createElement("span");
+
+    // Boşluk karakteri için görünmez bir boşluk oluştur
+    if (text[index] === " ") {
+      span.innerHTML = "&nbsp;";
+    } else {
+      span.textContent = text[index];
+    }
+
+    textElement.appendChild(span);
+
+    // Harfi görünür yap
+    setTimeout(() => {
+      span.style.opacity = 1;
+    }, speed);
+
+    index++;
+    setTimeout(type, speed);
+    speed = Math.max(50, speed - 10); // Hızı artır
+  } else {
+    // Yazı tamamlandıktan sonra harfleri "disappear" animasyonuna geçir
+    setTimeout(() => {
+      const spans = textElement.querySelectorAll("span");
+      spans.forEach((span, i) => {
+        setTimeout(() => {
+          span.classList.add("disappear");
+        }, i * 100); // Her harf için gecikme ekle
+      });
+
+      // Tekrar yazma işlemini başlat
+      setTimeout(() => {
+        textElement.innerHTML = ""; // Mevcut yazıyı temizle
+        index = 0;
+        speed = 200;
+        type(); // Tekrar yazı yazmaya başla
+      }, 5000); // Disappear animasyonundan sonra 2 saniye bekle
+    }, 1000); // Yazı tamamlandıktan 1 saniye sonra başlat
+  }
+}
+
+type();

@@ -1029,8 +1029,8 @@ textarea {
 
 #text {
   display: flex;
-  font-size: 1rem;
-  gap: 5px; /* Harfler arasında boşluk */
+  font-size: 2rem;
+  /* Harfler arasında boşluk */
 }
 
 #text span {

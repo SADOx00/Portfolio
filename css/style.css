@@ -407,7 +407,7 @@ textarea {
 }
 .projects__row-content-desc {
   font-size: 1.8rem;
-  color: grey;
+  color: rgb(67, 57, 57);
   max-width: 60rem;
   line-height: 1.7;
   margin-bottom: 3rem;
@@ -876,29 +876,6 @@ textarea {
   color: #272525;
 }
 
-.mouse {
-  width: 25px;
-  height: 40px;
-  border: 2px solid #eee;
-  border-radius: 60px;
-  position: relative;
-  overflow: hidden;
-}
-.mouse::before {
-  content: "";
-  width: 5px;
-  height: 5px;
-  position: absolute;
-  top: 7px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #eee;
-  border-radius: 50%;
-  opacity: 1;
-  animation: wheel 1.3s infinite;
-  -webkit-animation: wheel 1.3s infinite;
-}
-
 @keyframes wheel {
   to {
     opacity: 0;
@@ -1064,4 +1041,96 @@ textarea {
     color: #ff0000;
     filter: blur(3px); /* Efektle bulanıklaştır */
   }
+}
+
+.scroll-icon {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 999;
+  color: #fff;
+}
+
+.scroll-icon .mouse {
+  width: 40px;
+  height: 70px;
+  border: 3px solid #046583;
+  border-radius: 50px; /* Fare simgesi yuvarlak */
+  position: relative;
+  animation: mouse-move 2s infinite ease-in-out; /* Fare simgesi yukarı-aşağı hareket ediyor */
+  background: linear-gradient(
+    180deg,
+    #0e88da,
+    #afbfc3
+  ); /* Mavi ile beyaz arasında geçiş */
+}
+
+.scroll-icon .wheel {
+  width: 10px;
+  height: 10px;
+  background-color: rgb(4, 74, 145);
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: wheel-spin 1.5s infinite linear; /* Sürekli dönen tekerlek */
+}
+
+@keyframes wheel-spin {
+  0% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+
+@keyframes mouse-move {
+  0% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -10px); /* Hafif yukarı çıkar */
+  }
+  100% {
+    transform: translate(-50%, 0); /* Geri döner */
+  }
+}
+
+.scroll-icon span {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: white;
+  opacity: 0.7;
+}
+
+#saded {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  white-space: pre-wrap; /* Satır sonlarını korur */
+  display: inline;
+  position: relative;
+}
+.fade-in {
+  display: inline-block;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.fade-in.visible {
+  opacity: 1;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+.dark-mode {
+  background-color: #333;
+  color: #f0f0f0;
 }

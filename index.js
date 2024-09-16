@@ -127,3 +127,46 @@ function type() {
 }
 
 type();
+
+document.addEventListener("DOMContentLoaded", function () {
+  const textContainer = document.getElementById("saded");
+  const text =
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto illo harum dolore, id ad dolores magnam recusandae, sed cum ex hic ullam dolor enim eos officia et voluptatibus explicabo soluta.";
+  let index = 0;
+  let delay = 150; // Başlangıç gecikmesi (ms)
+
+  function typeWriter() {
+    if (index < text.length) {
+      const charSpan = document.createElement("span");
+      charSpan.textContent = text.charAt(index);
+      charSpan.classList.add("fade-in");
+      textContainer.appendChild(charSpan);
+
+      setTimeout(() => {
+        charSpan.classList.add("visible");
+      }, 50); // Karakterin görünür hale gelmesi için küçük bir gecikme
+
+      index++;
+      delay = Math.max(20, delay - 5); // Gecikmeyi azalt (en az 20 ms)
+      setTimeout(typeWriter, delay);
+    }
+  }
+
+  // IntersectionObserver ile görünürlük kontrolü
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Eğer element görünüyorsa yazıyı göster
+          textContainer.style.visibility = "visible";
+          typeWriter();
+          // Observer'ı kaldır
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  ); // Elementin %10'u görünürse
+
+  observer.observe(textContainer);
+});

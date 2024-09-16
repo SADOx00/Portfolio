@@ -1005,10 +1005,9 @@ textarea {
 }
 
 #text {
-  display: flex;
+ 
   font-size: 2rem;
-  white-space: pre;
-  gap: 5px; /* Harfler arasında boşluk */
+  /* Harfler arasında boşluk */
 }
 
 #text span {

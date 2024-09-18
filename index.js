@@ -170,3 +170,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
   observer.observe(textContainer);
 });
+
+const imgContainer = document.querySelector(".projects__row-img-cont");
+const blurDot = document.querySelector(".blur-dot");
+
+imgContainer.addEventListener("mousemove", (e) => {
+  const rect = imgContainer.getBoundingClientRect();
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;
+
+  blurDot.style.display = "block"; // Blur dotu görünür yap
+  blurDot.style.left = `${x}px`; // X koordinatına yerleştir
+  blurDot.style.top = `${y}px`; // Y koordinatına yerleştir
+});
+
+imgContainer.addEventListener("mouseleave", () => {
+  blurDot.style.display = "none"; // Fare çıkınca blur dotu gizle
+});

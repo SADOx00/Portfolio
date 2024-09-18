@@ -12,6 +12,7 @@ $breakpoint arguement choices:
 
 Inside media queries 1em is always 16px i.e 1em = 16px at every screen size only inside media queries
 */
+
 *,
 *::after,
 *::before {
@@ -378,8 +379,16 @@ textarea {
 .projects__row-img-cont {
   overflow: hidden;
 }
+.projects__row-img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
 .projects__row-img {
+  transition: transform 0.3s ease;
   width: 100%;
+  margin-top: 15px;
+  height: 400px;
+  border-radius: 50px;
   display: block;
   object-fit: cover;
 }
@@ -1199,4 +1208,11 @@ body {
       opacity: 0.7;
     }
   }
+}
+
+#proje-1 {
+  background-color: #8ecae6;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 30px;
 }

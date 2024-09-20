@@ -130,8 +130,9 @@ type();
 
 document.addEventListener("DOMContentLoaded", function () {
   const textContainer = document.getElementById("saded");
-  const text =
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto illo harum dolore, id ad dolores magnam recusandae, sed cum ex hic ullam dolor enim eos officia et voluptatibus explicabo soluta.";
+  const text = `Bu uygulama hem site üzerinden hemde API olarak çalışabilmektedir.
+genel olarak bir tür Email Gönderme botu yerine kulanılabir.`;
+
   let index = 0;
   let delay = 150; // Başlangıç gecikmesi (ms)
 

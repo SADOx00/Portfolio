@@ -299,6 +299,17 @@ textarea {
   max-width: 90rem;
   width: 92%;
 }
+.home-hero {
+  background-image: linear-gradient(
+    130deg,
+    hsl(240deg 100% 20%) 0%,
+    hsl(312deg 100% 23%) 36%,
+    hsl(336deg 100% 33%) 61%,
+    hsl(6deg 67% 47%) 78%,
+    hsl(35deg 100% 40%) 90%,
+    hsl(55deg 83% 41%) 100%
+  );
+}
 @media only screen and (max-width: 37.5em) {
   .home-hero__content {
     padding: 19rem 0 13rem 0;
@@ -654,11 +665,11 @@ textarea {
 }
 
 .header {
+  margin: 20px;
   position: fixed;
   width: 100%;
   z-index: 1000;
-  background: #000;
-  background: #fff;
+
   box-shadow: 0 10px 100px rgba(0, 0, 0, 0.1);
 }
 .header__content {
@@ -676,7 +687,7 @@ textarea {
   display: flex;
   align-items: center;
   cursor: pointer;
-  color: #333;
+
   transition: color 0.3s;
 }
 .header__logo-container:hover {
@@ -688,7 +699,6 @@ textarea {
   border-radius: 50px;
   overflow: hidden;
   margin-right: 1.5rem;
-  background: #0062b9;
 }
 @media only screen and (max-width: 56.25em) {
   .header__logo-img-cont {
@@ -709,9 +719,22 @@ textarea {
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 1px;
+  color: rgb(20, 19, 19);
+  font-weight: 100;
 }
 .header__links {
   display: flex;
+}
+
+.header {
+  border-radius: 30px;
+
+  background: rgb(94, 8, 78);
+  background: linear-gradient(
+    90deg,
+    rgba(94, 8, 78, 0.5) 0%,
+    rgba(177, 207, 8, 0.5) 100%
+  );
 }
 @media only screen and (max-width: 37.5em) {
   .header__links {
@@ -722,7 +745,8 @@ textarea {
   padding: 2.2rem 3rem;
   display: inline-block;
   font-size: 1.6rem;
-  color: #333;
+  font-weight: 100;
+  color: rgb(20, 19, 19);
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 700;
@@ -754,7 +778,6 @@ textarea {
   width: 100%;
 }
 .header__sm-menu {
-  background: #fff;
   position: absolute;
   width: 100%;
   top: 100%;
@@ -776,13 +799,21 @@ textarea {
   }
 }
 .header__sm-menu-link a {
+  background: rgb(94, 8, 78);
+  background: linear-gradient(
+    114deg,
+    rgba(94, 8, 78, 1) 34%,
+    rgba(15, 47, 158, 1) 100%
+  );
+  margin: 1px;
+  border-radius: 30px;
   display: block;
   text-decoration: none;
   padding: 2.5rem 3rem;
   font-size: 1.6rem;
-  color: #333;
+  color: wheat;
   text-align: right;
-  border-bottom: 1px solid #eee;
+
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -900,12 +931,22 @@ textarea {
 }
 
 .bttn {
-  background-color: rgba(0, 98, 185, 0.8);
-  color: white;
+  background: rgb(94, 8, 78);
+  background: linear-gradient(
+    351deg,
+    rgba(94, 8, 78, 0.8) 43%,
+    rgba(15, 47, 158, 0.8) 100%
+  );
+  color: wheat;
+  border-radius: 15px;
+}
+.electrolize-regular {
+  font-family: "Electrolize", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 .bttn:hover {
-  color: rgba(0, 98, 185, 0.8);
-  background-color: white;
+  color: rgba(247, 247, 248, 0.8);
   transition: 0.5s;
   border: #0062b9 1px solid;
 }

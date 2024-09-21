@@ -934,12 +934,7 @@ textarea {
 }
 
 .bttn {
-  background: rgb(94, 8, 78);
-  background: linear-gradient(
-    351deg,
-    rgba(94, 8, 78, 0.8) 43%,
-    rgba(15, 47, 158, 0.8) 100%
-  );
+  background: #4f1787;
   color: wheat;
   border-radius: 15px;
 }

@@ -798,6 +798,9 @@ textarea {
     opacity: 1;
   }
 }
+::-webkit-scrollbar {
+  display: none;
+}
 .header__sm-menu-link a {
   background: rgb(94, 8, 78);
   background: linear-gradient(

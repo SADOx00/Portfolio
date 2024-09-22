@@ -667,16 +667,20 @@ textarea {
 .header {
   margin: 20px;
   position: fixed;
-  width: 100%;
+  width: 95%;
   z-index: 1000;
 
   box-shadow: 0 10px 100px rgba(0, 0, 0, 0.1);
+}
+
+.cann {
+  width: 80%;
 }
 .header__content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 5rem;
+  padding-left: 10px;
 }
 @media only screen and (max-width: 56.25em) {
   .header__content {
@@ -800,6 +804,12 @@ textarea {
 }
 ::-webkit-scrollbar {
   display: none;
+}
+.header {
+  height: 70px;
+}
+
+.header__content {
 }
 .header__sm-menu-link a {
   background: rgb(94, 8, 78);

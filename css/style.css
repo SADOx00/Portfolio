@@ -301,13 +301,9 @@ textarea {
 }
 .home-hero {
   background-image: linear-gradient(
-    130deg,
-    hsl(240deg 100% 20%) 0%,
-    hsl(312deg 100% 23%) 36%,
-    hsl(336deg 100% 33%) 61%,
-    hsl(6deg 67% 47%) 78%,
-    hsl(35deg 100% 40%) 90%,
-    hsl(55deg 83% 41%) 100%
+    85.2deg,
+    rgba(33, 3, 40, 1) 7.5%,
+    rgba(65, 5, 72, 1) 88.7%
   );
 }
 @media only screen and (max-width: 37.5em) {

@@ -958,7 +958,7 @@ textarea {
   transition: 0.5s;
   background-size: 200% auto;
   color: white;
-  box-shadow: 0 0 20px #eee;
+  box-shadow: 0 0 5px #eee;
   border-radius: 10px;
   display: block;
 }
@@ -1304,4 +1304,15 @@ body {
   margin: 15px;
   padding: 15px;
   border-radius: 30px;
+}
+
+#about {
+  background-image: linear-gradient(
+    130deg,
+    hsl(312deg 100% 23%) 16%,
+    hsl(336deg 100% 33%) 61%,
+    hsl(6deg 67% 47%) 85%,
+    hsl(35deg 100% 40%) 90%,
+    hsl(55deg 83% 41%) 100%
+  );
 }

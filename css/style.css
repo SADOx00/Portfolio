@@ -399,7 +399,7 @@ textarea {
   transition: transform 0.3s ease;
   width: 100%;
   margin-top: 15px;
-  height: 400px;
+  height: 300px;
   border-radius: 50px;
   display: block;
   object-fit: cover;
@@ -969,34 +969,10 @@ textarea {
   text-decoration: none;
 }
 
-.bttn {
-  background: #4f1787;
-  background-image: linear-gradient(
-    to right,
-    #5f2c82 0%,
-    #49a09d 51%,
-    #5f2c82 100%
-  );
-  margin: 10px;
-  padding: 15px 45px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  border-radius: 10px;
-}
 .electrolize-regular {
   font-family: "Electrolize", sans-serif;
   font-weight: 400;
   font-style: normal;
-}
-.bttn:hover {
-  background-position: right center; /* change the direction of the change here */
-  color: #fff;
-  text-decoration: none;
-  transition: 0.5s;
-  border: #0062b9 1px solid;
 }
 
 .container {
@@ -1300,19 +1276,78 @@ body {
 }
 
 #proje-1 {
-  background-color: #8ecae6;
+  background-color: #00c6ff;
   margin: 15px;
   padding: 15px;
   border-radius: 30px;
 }
-
+.heading-sec__main {
+  color: wheat;
+}
 #about {
+  border-top: #0b102c 10px solid;
+  border-bottom: #0b102c 4px solid;
   background-image: linear-gradient(
     130deg,
-    hsl(312deg 100% 23%) 16%,
+    hsl(240deg 100% 20%) 1%,
+    hsl(312deg 100% 23%) 36%,
     hsl(336deg 100% 33%) 61%,
     hsl(6deg 67% 47%) 85%,
     hsl(35deg 100% 40%) 90%,
     hsl(55deg 83% 41%) 100%
   );
+  transition: all;
+}
+.heading-sec__sub {
+  color: white;
+}
+
+.btn-gradd {
+  background-image: linear-gradient(
+    to right,
+    #c21500 0%,
+    #ffc500 51%,
+    #c21500 100%
+  );
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 5px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.btn-gradd:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn-graddd {
+  background-image: linear-gradient(
+    to right,
+    #00c6ff 0%,
+    #0072ff 51%,
+    #00c6ff 100%
+  );
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.btn-graddd:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
 }

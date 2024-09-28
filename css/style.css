@@ -1351,3 +1351,12 @@ body {
   color: #fff;
   text-decoration: none;
 }
+
+.home-hero__cta {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-gradd {
+  width: 50%;
+}

@@ -392,7 +392,6 @@ textarea {
   overflow: hidden;
 }
 .projects__row-img:hover {
-  transform: scale(1.1);
   cursor: pointer;
 }
 .projects__row-img {
@@ -1276,7 +1275,9 @@ body {
 }
 
 #proje-1 {
-  background-color: #00c6ff;
+  background-color: #21d4fd;
+  background-image: linear-gradient(19deg, #21d4fd 0%, #b721ff 100%);
+
   margin: 15px;
   padding: 15px;
   border-radius: 30px;
@@ -1285,7 +1286,7 @@ body {
   color: wheat;
 }
 #about {
-  border-top: #0b102c 10px solid;
+  border-top: #0b102c px solid;
   border-bottom: #0b102c 4px solid;
   background-image: linear-gradient(
     130deg,
@@ -1359,4 +1360,69 @@ body {
 
 .btn-gradd {
   width: 50%;
+}
+
+@keyframes flowGradient {
+  0% {
+    background-position: 50% 50%; /* Merkezde başla */
+  }
+  7.5% {
+    background-position: 60% 50%; /* Merkezden dışarı kayma */
+  }
+  15% {
+    background-position: 70% 50%; /* Dışarı kayma */
+  }
+  22.5% {
+    background-position: 80% 50%; /* Yavaşça dışarı */
+  }
+  30% {
+    background-position: 90% 50%; /* Dışarıdan kayma */
+  }
+  37.5% {
+    background-position: 100% 50%; /* Tam dışarıda */
+  }
+  45% {
+    background-position: 110% 50%; /* Dışarıyı geçmeye başla */
+  }
+  52.5% {
+    background-position: 120% 50%; /* Dışarıda kayma */
+  }
+  60% {
+    background-position: 130% 50%; /* Dışarıda kalma */
+  }
+  67.5% {
+    background-position: 140% 50%; /* Dışarıda kalma */
+  }
+  75% {
+    background-position: 150% 50%; /* Dışarıda kalma */
+  }
+  82.5% {
+    background-position: 160% 50%; /* Dışarıdan kayma */
+  }
+  90% {
+    background-position: 170% 50%; /* Dışarıda kalma */
+  }
+  100% {
+    background-position: 200% 50%; /* Tam dışa kayarak döngü başla */
+  }
+}
+
+.projects__content {
+  border: #94611e 1px solid;
+  border-radius: 50px;
+  padding: 15px;
+  background-color: #fa8bff;
+  background-image: linear-gradient(
+    45deg,
+    #fa8bff,
+    /* Pembe */ #2bd2ff,
+    /* Mavi */ #2bff88 /* Yeşil */
+  );
+  background-size: 300% 300%; /* Arka planı büyütüyoruz */
+  animation: flowGradient 15s infinite linear; /* Sürekli akma animasyonu */
+}
+
+.sec-pad {
+  border-bottom: #0b102c 5px solid;
+  background-color: #4b70f5;
 }

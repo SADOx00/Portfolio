@@ -128,6 +128,8 @@ function type() {
 
 type();
 
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const textContainer = document.getElementById("saded");
   const text = `Bu uygulama hem site üzerinden hemde API olarak çalışabilmektedir.

@@ -438,11 +438,11 @@ textarea {
   }
 }
 
-.contact {
+.sec-pad {
   background: linear-gradient(
       to right,
-      rgba(0, 98, 185, 0.8),
-      rgba(0, 98, 185, 0.8)
+      rgba(17, 49, 119, 0.8),
+      rgba(0, 151, 185, 0.8)
     ),
     url(../../assets/svg/common-bg.svg);
   background-size: cover;
@@ -450,15 +450,48 @@ textarea {
 }
 .contact__form-container {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background: white;
+  background: hsla(236, 100%, 8%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(236, 100%, 8%, 1) 0%,
+    hsla(211, 100%, 28%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(236, 100%, 8%, 1) 0%,
+    hsla(211, 100%, 28%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    rgb(10, 17, 105) 0%,
+    hsla(211, 100%, 28%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#000328", endColorstr="#00458E", GradientType=1 );
   padding: 4rem;
   margin-top: 6rem;
   max-width: 80rem;
   text-align: right;
   width: 95%;
-  border-radius: 5px;
+  border-radius: 30px;
   margin: 5rem auto 0 auto;
 }
+
+.contact__form-container input,
+.contact__form-container textarea {
+  background-color: rgb(17, 70, 70);
+  color: wheat;
+  border-radius: 20px;
+  border: none;
+}
+
+.contact__form-container label {
+  color: wheat;
+}
+
 @media only screen and (max-width: 37.5em) {
   .contact__form-container {
     padding: 3rem;
@@ -946,9 +979,9 @@ textarea {
 #btn-grad {
   background-image: linear-gradient(
     to right,
-    #c04848 0%,
-    #480048 51%,
-    #c04848 100%
+    #ee0979 0%,
+    #ff6a00 51%,
+    #ee0979 100%
   );
   margin: 10px;
   padding: 15px 45px;
@@ -957,7 +990,7 @@ textarea {
   transition: 0.5s;
   background-size: 200% auto;
   color: white;
-  box-shadow: 0 0 5px #eee;
+  box-shadow: 0 0 4px #eee;
   border-radius: 10px;
   display: block;
 }
